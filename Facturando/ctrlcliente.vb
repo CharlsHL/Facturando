@@ -1,10 +1,10 @@
-﻿Public Class Form3
+﻿Public Class ctrlcliente
     Dim texts As New Collection
     Dim Incorrect As Integer
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Dispose()
-        Form2.Show()
+        menu1.Show()
     End Sub
     Private Sub Facturacion_Click(sender As Object, e As EventArgs) Handles Facturacion.Click
         GroupBox1.Text = "Nuevo Cliente"
@@ -14,6 +14,7 @@
         factura.Enabled = False
         ComboBox1.Visible = False
         Button2.Enabled = False
+        ComboBox1.Visible = False
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim i As Integer
@@ -70,6 +71,12 @@
         GroupBox1.Text = "Editar Datos"
         GroupBox1.Visible = True
         ComboBox2.Visible = True
+        GroupBox1.Visible = True
+        Facturacion.Enabled = False
+        moddatos.Enabled = False
+        factura.Enabled = False
+        Button2.Enabled = False
+        ComboBox1.Visible = False
 
     End Sub
 End Class

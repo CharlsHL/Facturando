@@ -1,4 +1,4 @@
-﻿Public Class Form2
+﻿Public Class menu1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (MsgBox("¿Esta seguro de salir?", vbCritical + vbYesNo) = vbYes) Then
             End
@@ -23,7 +23,7 @@
 
     Private Sub Facturacion_Click(sender As Object, e As EventArgs) Handles Facturacion.Click
         Me.Hide()
-        Form3.Show()
+        ctrlcliente.Show()
 
     End Sub
 End Class

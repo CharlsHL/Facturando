@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form3
+Partial Class ctrlcliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Form3
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlcliente))
         Me.Facturacion = New System.Windows.Forms.Button()
         Me.factura = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -36,6 +36,7 @@ Partial Class Form3
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -46,7 +47,7 @@ Partial Class Form3
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.moddatos = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +74,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(611, 473)
+        Me.Button2.Location = New System.Drawing.Point(629, 490)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(133, 37)
         Me.Button2.TabIndex = 7
@@ -188,6 +189,16 @@ Partial Class Form3
         Me.GroupBox1.Text = "Nuevo Cliente"
         Me.GroupBox1.Visible = False
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(83, 16)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(202, 21)
+        Me.ComboBox2.TabIndex = 24
+        Me.ComboBox2.Text = "Selecciona Cliente"
+        Me.ComboBox2.Visible = False
+        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(286, 216)
@@ -272,22 +283,21 @@ Partial Class Form3
         Me.moddatos.Text = "&Editar cliente"
         Me.moddatos.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'Panel2
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(83, 16)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(202, 21)
-        Me.ComboBox2.TabIndex = 24
-        Me.ComboBox2.Text = "Selecciona Cliente"
-        Me.ComboBox2.Visible = False
+        Me.Panel2.BackColor = System.Drawing.Color.Gray
+        Me.Panel2.Location = New System.Drawing.Point(-4, 533)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(786, 21)
+        Me.Panel2.TabIndex = 24
         '
-        'Form3
+        'ctrlcliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(774, 554)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.moddatos)
         Me.Controls.Add(Me.GroupBox1)
@@ -296,7 +306,7 @@ Partial Class Form3
         Me.Controls.Add(Me.factura)
         Me.Controls.Add(Me.Facturacion)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form3"
+        Me.Name = "ctrlcliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Facturacion"
         Me.Panel1.ResumeLayout(False)
@@ -332,4 +342,5 @@ Partial Class Form3
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents moddatos As Button
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Panel2 As Panel
 End Class

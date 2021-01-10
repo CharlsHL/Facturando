@@ -7,7 +7,7 @@
         timer = timer + 1
         Me.Label1.Text = timer
         If timer = 10 Then
-            Form2.Show()
+            menu1.Show()
             Me.Dispose()
         End If
     End Sub
