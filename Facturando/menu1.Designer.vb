@@ -38,12 +38,15 @@ Partial Class menu1
         Me.Factura = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.PanelMenulateral.SuspendLayout()
         Me.submenu2.SuspendLayout()
         Me.submenu1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -212,6 +215,7 @@ Partial Class menu1
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.PictureBox3)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -234,6 +238,15 @@ Partial Class menu1
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(12, 33)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(211, 53)
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
         'menu1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -253,6 +266,8 @@ Partial Class menu1
         Me.PanelMenulateral.ResumeLayout(False)
         Me.submenu2.ResumeLayout(False)
         Me.submenu1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -271,4 +286,5 @@ Partial Class menu1
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
