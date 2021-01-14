@@ -80,12 +80,6 @@
       <DependentUpon>carga.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu1.Designer.vb">
-      <DependentUpon>menu1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="menu1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ctrlcliente.Designer.vb">
       <DependentUpon>ctrlcliente.vb</DependentUpon>
     </Compile>
@@ -112,9 +106,6 @@
   <ItemGroup>
     <EmbeddedResource Include="carga.resx">
       <DependentUpon>carga.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="menu1.resx">
-      <DependentUpon>menu1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlcliente.resx">
       <DependentUpon>ctrlcliente.vb</DependentUpon>

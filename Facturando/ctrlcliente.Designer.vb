@@ -23,8 +23,6 @@ Partial Class ctrlcliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlcliente))
-        Me.Facturacion = New System.Windows.Forms.Button()
-        Me.factura = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -46,31 +44,29 @@ Partial Class ctrlcliente
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.moddatos = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PanelMenulateral = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.submenu2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.factura = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.submenu1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Facturacion = New System.Windows.Forms.Button()
+        Me.moddatos = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.PanelMenulateral.SuspendLayout()
+        Me.submenu2.SuspendLayout()
+        Me.submenu1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Facturacion
-        '
-        Me.Facturacion.Location = New System.Drawing.Point(12, 55)
-        Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Size = New System.Drawing.Size(133, 37)
-        Me.Facturacion.TabIndex = 5
-        Me.Facturacion.Text = "&Agregar cliente"
-        Me.Facturacion.UseVisualStyleBackColor = True
-        '
-        'factura
-        '
-        Me.factura.Location = New System.Drawing.Point(12, 176)
-        Me.factura.Name = "factura"
-        Me.factura.Size = New System.Drawing.Size(133, 37)
-        Me.factura.TabIndex = 6
-        Me.factura.Text = "&Generar Factura"
-        Me.factura.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -181,7 +177,7 @@ Partial Class ctrlcliente
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(151, 72)
+        Me.GroupBox1.Location = New System.Drawing.Point(287, 72)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(460, 260)
         Me.GroupBox1.TabIndex = 21
@@ -268,20 +264,11 @@ Partial Class ctrlcliente
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(151, 55)
+        Me.ComboBox1.Location = New System.Drawing.Point(287, 55)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(227, 21)
         Me.ComboBox1.TabIndex = 23
         Me.ComboBox1.Visible = False
-        '
-        'moddatos
-        '
-        Me.moddatos.Location = New System.Drawing.Point(12, 115)
-        Me.moddatos.Name = "moddatos"
-        Me.moddatos.Size = New System.Drawing.Size(133, 37)
-        Me.moddatos.TabIndex = 22
-        Me.moddatos.Text = "&Editar cliente"
-        Me.moddatos.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -291,20 +278,179 @@ Partial Class ctrlcliente
         Me.Panel2.Size = New System.Drawing.Size(786, 21)
         Me.Panel2.TabIndex = 24
         '
+        'PanelMenulateral
+        '
+        Me.PanelMenulateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.PanelMenulateral.Controls.Add(Me.Button1)
+        Me.PanelMenulateral.Controls.Add(Me.submenu2)
+        Me.PanelMenulateral.Controls.Add(Me.Button7)
+        Me.PanelMenulateral.Controls.Add(Me.submenu1)
+        Me.PanelMenulateral.Controls.Add(Me.Button10)
+        Me.PanelMenulateral.Controls.Add(Me.Panel3)
+        Me.PanelMenulateral.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelMenulateral.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMenulateral.Name = "PanelMenulateral"
+        Me.PanelMenulateral.Size = New System.Drawing.Size(246, 554)
+        Me.PanelMenulateral.TabIndex = 25
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Button1.Location = New System.Drawing.Point(0, 509)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(246, 45)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "&Salir"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'submenu2
+        '
+        Me.submenu2.Controls.Add(Me.factura)
+        Me.submenu2.Controls.Add(Me.Button6)
+        Me.submenu2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.submenu2.Location = New System.Drawing.Point(0, 317)
+        Me.submenu2.Name = "submenu2"
+        Me.submenu2.Size = New System.Drawing.Size(246, 104)
+        Me.submenu2.TabIndex = 9
+        '
+        'factura
+        '
+        Me.factura.Dock = System.Windows.Forms.DockStyle.Top
+        Me.factura.FlatAppearance.BorderSize = 0
+        Me.factura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.factura.ForeColor = System.Drawing.Color.Gainsboro
+        Me.factura.Location = New System.Drawing.Point(3, 3)
+        Me.factura.Name = "factura"
+        Me.factura.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.factura.Size = New System.Drawing.Size(246, 45)
+        Me.factura.TabIndex = 7
+        Me.factura.Text = "&Generar Factura"
+        Me.factura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.factura.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Button6.Location = New System.Drawing.Point(3, 54)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(246, 45)
+        Me.Button6.TabIndex = 8
+        Me.Button6.Text = "Button6"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Button7.Location = New System.Drawing.Point(0, 272)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button7.Size = New System.Drawing.Size(246, 45)
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "Contable"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'submenu1
+        '
+        Me.submenu1.Controls.Add(Me.Facturacion)
+        Me.submenu1.Controls.Add(Me.moddatos)
+        Me.submenu1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.submenu1.Location = New System.Drawing.Point(0, 172)
+        Me.submenu1.Name = "submenu1"
+        Me.submenu1.Size = New System.Drawing.Size(246, 100)
+        Me.submenu1.TabIndex = 7
+        '
+        'Facturacion
+        '
+        Me.Facturacion.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Facturacion.FlatAppearance.BorderSize = 0
+        Me.Facturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Facturacion.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Facturacion.Location = New System.Drawing.Point(3, 3)
+        Me.Facturacion.Name = "Facturacion"
+        Me.Facturacion.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Facturacion.Size = New System.Drawing.Size(246, 45)
+        Me.Facturacion.TabIndex = 7
+        Me.Facturacion.Text = "Agregar Cliente"
+        Me.Facturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Facturacion.UseVisualStyleBackColor = True
+        '
+        'moddatos
+        '
+        Me.moddatos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.moddatos.FlatAppearance.BorderSize = 0
+        Me.moddatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.moddatos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.moddatos.Location = New System.Drawing.Point(3, 54)
+        Me.moddatos.Name = "moddatos"
+        Me.moddatos.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.moddatos.Size = New System.Drawing.Size(246, 45)
+        Me.moddatos.TabIndex = 8
+        Me.moddatos.Text = "&Editar Cliente"
+        Me.moddatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.moddatos.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Button10.Location = New System.Drawing.Point(0, 127)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button10.Size = New System.Drawing.Size(246, 45)
+        Me.Button10.TabIndex = 6
+        Me.Button10.Text = "Facturacion"
+        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.PictureBox3)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(246, 127)
+        Me.Panel3.TabIndex = 5
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(12, 33)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(211, 53)
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
         'ctrlcliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(774, 554)
+        Me.Controls.Add(Me.PanelMenulateral)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.moddatos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.factura)
-        Me.Controls.Add(Me.Facturacion)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ctrlcliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -314,12 +460,14 @@ Partial Class ctrlcliente
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.PanelMenulateral.ResumeLayout(False)
+        Me.submenu2.ResumeLayout(False)
+        Me.submenu1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Facturacion As Button
-    Friend WithEvents factura As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
@@ -340,7 +488,18 @@ Partial Class ctrlcliente
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents moddatos As Button
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents PanelMenulateral As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents submenu2 As FlowLayoutPanel
+    Friend WithEvents submenu1 As FlowLayoutPanel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents factura As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Facturacion As Button
+    Friend WithEvents moddatos As Button
+    Friend WithEvents Button10 As Button
 End Class
