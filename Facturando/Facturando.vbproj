@@ -86,6 +86,11 @@
     <Compile Include="ctrlcliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FacturaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -118,6 +123,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="FacturaDataSet.xsc">
+      <DependentUpon>FacturaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FacturaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacturaDataSet.xss">
+      <DependentUpon>FacturaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

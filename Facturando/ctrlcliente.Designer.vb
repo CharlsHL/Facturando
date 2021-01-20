@@ -22,8 +22,8 @@ Partial Class ctrlcliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlcliente))
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -52,11 +52,17 @@ Partial Class ctrlcliente
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.submenu1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Facturacion = New System.Windows.Forms.Button()
+        Me.agregarc = New System.Windows.Forms.Button()
         Me.moddatos = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.FacturaDataSet = New Facturando.FacturaDataSet()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClientesTableAdapter = New Facturando.FacturaDataSetTableAdapters.clientesTableAdapter()
+        Me.FacturaDataSet1 = New Facturando.FacturaDataSet()
+        Me.FacturaDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,16 +72,12 @@ Partial Class ctrlcliente
         Me.submenu1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(629, 490)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(133, 37)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "&Volver"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -187,12 +189,14 @@ Partial Class ctrlcliente
         '
         'ComboBox2
         '
+        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.FacturaDataSet, "clientes.apellido", True))
+        Me.ComboBox2.DataSource = Me.ClientesBindingSource1
+        Me.ComboBox2.DisplayMember = "nombre"
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(83, 16)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(202, 21)
         Me.ComboBox2.TabIndex = 24
-        Me.ComboBox2.Text = "Selecciona Cliente"
         Me.ComboBox2.Visible = False
         '
         'Button4
@@ -367,7 +371,7 @@ Partial Class ctrlcliente
         '
         'submenu1
         '
-        Me.submenu1.Controls.Add(Me.Facturacion)
+        Me.submenu1.Controls.Add(Me.agregarc)
         Me.submenu1.Controls.Add(Me.moddatos)
         Me.submenu1.Dock = System.Windows.Forms.DockStyle.Top
         Me.submenu1.Location = New System.Drawing.Point(0, 172)
@@ -375,20 +379,20 @@ Partial Class ctrlcliente
         Me.submenu1.Size = New System.Drawing.Size(246, 100)
         Me.submenu1.TabIndex = 7
         '
-        'Facturacion
+        'agregarc
         '
-        Me.Facturacion.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Facturacion.FlatAppearance.BorderSize = 0
-        Me.Facturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Facturacion.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Facturacion.Location = New System.Drawing.Point(3, 3)
-        Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Facturacion.Size = New System.Drawing.Size(246, 45)
-        Me.Facturacion.TabIndex = 7
-        Me.Facturacion.Text = "Agregar Cliente"
-        Me.Facturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Facturacion.UseVisualStyleBackColor = True
+        Me.agregarc.Dock = System.Windows.Forms.DockStyle.Top
+        Me.agregarc.FlatAppearance.BorderSize = 0
+        Me.agregarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.agregarc.ForeColor = System.Drawing.Color.Gainsboro
+        Me.agregarc.Location = New System.Drawing.Point(3, 3)
+        Me.agregarc.Name = "agregarc"
+        Me.agregarc.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.agregarc.Size = New System.Drawing.Size(246, 45)
+        Me.agregarc.TabIndex = 7
+        Me.agregarc.Text = "Agregar Cliente"
+        Me.agregarc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.agregarc.UseVisualStyleBackColor = True
         '
         'moddatos
         '
@@ -439,6 +443,35 @@ Partial Class ctrlcliente
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
         '
+        'FacturaDataSet
+        '
+        Me.FacturaDataSet.DataSetName = "FacturaDataSet"
+        Me.FacturaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "clientes"
+        Me.ClientesBindingSource.DataSource = Me.FacturaDataSet
+        '
+        'ClientesTableAdapter
+        '
+        Me.ClientesTableAdapter.ClearBeforeFill = True
+        '
+        'FacturaDataSet1
+        '
+        Me.FacturaDataSet1.DataSetName = "FacturaDataSet"
+        Me.FacturaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FacturaDataSet1BindingSource
+        '
+        Me.FacturaDataSet1BindingSource.DataSource = Me.FacturaDataSet1
+        Me.FacturaDataSet1BindingSource.Position = 0
+        '
+        'ClientesBindingSource1
+        '
+        Me.ClientesBindingSource1.DataMember = "clientes"
+        Me.ClientesBindingSource1.DataSource = Me.FacturaDataSet1BindingSource
+        '
         'ctrlcliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -450,7 +483,6 @@ Partial Class ctrlcliente
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ctrlcliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -465,10 +497,14 @@ Partial Class ctrlcliente
         Me.submenu1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
@@ -499,7 +535,13 @@ Partial Class ctrlcliente
     Friend WithEvents factura As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents Facturacion As Button
+    Friend WithEvents agregarc As Button
     Friend WithEvents moddatos As Button
     Friend WithEvents Button10 As Button
+    Friend WithEvents FacturaDataSet As FacturaDataSet
+    Friend WithEvents ClientesBindingSource As BindingSource
+    Friend WithEvents ClientesTableAdapter As FacturaDataSetTableAdapters.clientesTableAdapter
+    Friend WithEvents FacturaDataSet1BindingSource As BindingSource
+    Friend WithEvents FacturaDataSet1 As FacturaDataSet
+    Friend WithEvents ClientesBindingSource1 As BindingSource
 End Class
